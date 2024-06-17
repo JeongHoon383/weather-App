@@ -1,0 +1,9 @@
+.WeatherBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  width: 35%;
+  padding: 20px 0px;
+  background-color: rgb(236, 236, 236);
+}
