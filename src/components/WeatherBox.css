@@ -16,6 +16,6 @@
 }
 
 .WeatherBox div:nth-child(3) {
-  color: aqua;
+  color: blue;
   font-size: 30px;
 }
