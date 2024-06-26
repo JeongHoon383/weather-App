@@ -53,11 +53,11 @@ function App() {
     }
   }, [city]);
 
-  const handleChangeCity = (city) => {
-    if (city === "current") {
+  const handleChangeCity = (curCity) => {
+    if (curCity === "current") {
       setCity("");
     } else {
-      setCity(city);
+      setCity(curCity);
     }
   };
 
@@ -78,7 +78,7 @@ function App() {
           <WeatherBox />
           <ButtonBox
             cities={cities}
-            setCity={setCity}
+            city={city}
             handleChangeCity={handleChangeCity}
           />
         </div>

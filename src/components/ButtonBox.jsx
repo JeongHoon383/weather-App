@@ -2,20 +2,20 @@ import React from "react";
 import Button from "./Button";
 import "./ButtonBox.css";
 
-const ButtonBox = ({ cities, setCity, handleChangeCity }) => {
+const ButtonBox = ({ cities, city, handleChangeCity }) => {
   return (
     <div className="ButtonBox">
       <Button
-        type={setCity === "" ? selected : ""}
+        type={city === "" ? "selected" : ""}
         name="Current Location"
         onClick={() => handleChangeCity("current")}
       />
-      {cities.map((city) => (
+      {cities.map((curCity) => (
         <Button
-          type={setCity === city ? selected : ""}
-          name={city}
-          key={city}
-          onClick={() => handleChangeCity(city)}
+          type={city === curCity ? "selected" : ""}
+          name={curCity}
+          key={curCity}
+          onClick={() => handleChangeCity(curCity)}
         />
       ))}
     </div>
